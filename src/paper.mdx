@@ -55,6 +55,11 @@ import dogsDiffc from "./assets/dogs-diffc.png"
 import dogsTrue from "./assets/dogs-true.png"
 import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
+
+<Wide>
+  <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
+</Wide>
+
 <Video src={outside} />
 
 <HighlightedSection>
@@ -147,21 +152,7 @@ A carousel is another useful pattern for a collection of visuals that don't nece
   </CarouselSlide>
 </Carousel>
 
-## Two columns
 
-Use the two columns component to display two columns of content. In this example, the first column contains a YouTube video embed and the second column contains an interactive 3D model viewer. By default, they display side by side, but if the screen is narrow enough (for example, on mobile), they're arranged vertically.
-
-<TwoColumns>
-  <YouTubeVideo slot="left" videoId="wjZofJX0v4M" />
-  <ModelViewer slot="right" src="/BoxVertexColors.glb" alt="A cube colored with a rainbow gradient" />
-</TwoColumns>
-
-
-## Citation
-
-If you copy your bibliography into `./bibliography.bib`, you can cite papers using their BibTeX keys, and they'll be automatically formatted and included in the bibliography section at the end. For example: [@vaswani2017attention]. Note that these citations are distinct from footnotes[^mynote], which show up in a separate section if you use them.
-
-[^mynote]: On the web, they should really be called "endnotes", since each page constitutes a full document.
 
 
 ## BibTeX 引文
@@ -188,7 +179,3 @@ If you copy your bibliography into `./bibliography.bib`, you can cite papers usi
   journal = {IEEE Transactions on Medical Imaging}
 }
 ```
-
-## Bibliography
-
-[^ref]
