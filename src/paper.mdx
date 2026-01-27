@@ -55,11 +55,6 @@ import dogsDiffc from "./assets/dogs-diffc.png"
 import dogsTrue from "./assets/dogs-true.png"
 import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
-
-<Wide>
-  <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-</Wide>
-
 <Video src={outside} />
 
 <HighlightedSection>
@@ -85,23 +80,6 @@ I constrained the maximum width of the text column to make sure it's readable ev
   <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
 </Wide>
 
-### Figure with caption
-
-Wrap a visual in a `Figure` component to add a caption.
-
-<Figure>
-  <Picture slot="figure" src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-  <Fragment slot="caption">A photo of two dogs running side-by-side in shallow water, lossily compressed using the [DiffC algorithm](https://jeremyiv.github.io/diffc-project-page/).</Fragment>
-</Figure>
-
-### Comparison slider
-
-Use the `Comparison` component to compare two visuals with an interactive slider.
-
-<Comparison client:idle >
-  <Picture slot="itemOne" src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-  <Picture slot="itemTwo" src={dogsTrue} alt="True photo of two dogs running side-by-side in shallow water" />
-</Comparison>
 
 ### Tab panels
 
@@ -151,8 +129,6 @@ A carousel is another useful pattern for a collection of visuals that don't nece
     />
   </CarouselSlide>
 </Carousel>
-
-
 
 
 ## BibTeX 引文
