@@ -51,15 +51,24 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/starwind/
 import { Comparison } from "./components/Comparison.tsx";
 
 import intor from "./assets/video/intor.mp4";
+import platform from "./assets/video/platform.mp4";
 import r1 from "./assets/img/R1.png";
 import r2 from "./assets/img/R2.png";
 import r3 from "./assets/img/R3.png";
 import spsvr from "./assets/img/spsvr.png";
 import dsvs from "./assets/img/dsvs.png";
 import smil from "./assets/img/smil.png";
-import dogsDiffc from "./assets/dogs-diffc.png"
-import dogsTrue from "./assets/dogs-true.png"
-import dogsMsillm from "@/assets/dogs-msillm.jpg"
+
+import c1 from "./assets/img/c1.png";
+import c2 from "./assets/img/c2.png";
+import c3 from "./assets/img/c3.png";
+import c4 from "./assets/img/c4.png";
+import c5 from "./assets/img/c5.png";
+
+import p1 from "./assets/img/p1.png";
+import p2 from "./assets/img/p2.png";
+import p3 from "./assets/img/p3.png";
+
 
 <Video src={intor} />
 
@@ -123,39 +132,44 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
 ## 学术交流
 
-项目相关成果先后在国家自然科学基金委员会 2023 年度管理科学与工程学科青年基金项目交流会、POMS International Conference in China（2025）、International Conference on Artificial Intelligence and Its Applications in Socio-economic Development（2025）等国际会议，以及“第一届海上智能与数字外科论坛”、“中国系统工程学会数据科学与知识系统工程专业委员会学术年会”、“中华护理学会全国手术装备护理学术年会”等国内重要学术平台进行公开会议报告和讨论
+项目相关成果先后在国家自然科学基金委员会 2023 年度管理科学与工程学科青年基金项目交流会、POMS International Conference in China（2025）、International Conference on Artificial Intelligence and Its Applications in Socio-economic Development（2025）等国际会议，以及“第一届海上智能与数字外科论坛”、“中国系统工程学会数据科学与知识系统工程专业委员会学术年会”、“中华护理学会全国手术装备护理学术年会”等国内重要学术平台进行公开会议报告和讨论。
 
 <Carousel>
   <CarouselSlide>
-    <Picture src={dogsTrue} alt="True photo of two dogs running side-by-side in shallow water" />
+    <Picture src={c1} />
   </CarouselSlide>
   <CarouselSlide>
-    <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
+    <Picture src={c2}  />
   </CarouselSlide>
   <CarouselSlide>
-    <Picture
-      src={dogsMsillm}
-      alt="Photo of two running dogs, lossily compressed using MS-ILLM"
-    />
+    <Picture src={c3}  />
+  </CarouselSlide>
+   <CarouselSlide>
+    <Picture src={c4}  />
+  </CarouselSlide>
+   <CarouselSlide>
+    <Picture src={c5}  />
   </CarouselSlide>
 </Carousel>
 
 ## 专利成果
-
+围绕手术行为理解、质量评估与系统安全保障等关键环节，形成了包括基于 SMIL 的胆囊切除术 CVS 自动评估系统、基于视频理解的手术器械—操作—组织智能识别方法以及微创手术视频摘要生成方法等专利。
 <Carousel>
   <CarouselSlide>
-    <Picture src={dogsTrue} alt="True photo of two dogs running side-by-side in shallow water" />
+    <Picture src={p1}  />
   </CarouselSlide>
   <CarouselSlide>
-    <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
+    <Picture src={p2}/>
   </CarouselSlide>
   <CarouselSlide>
-    <Picture
-      src={dogsMsillm}
-      alt="Photo of two running dogs, lossily compressed using MS-ILLM"
-    />
+    <Picture       src={p3}  />
   </CarouselSlide>
 </Carousel>
+
+## 成果应用与转化
+联合安医大一附院等单位，推动多维度成果转化与场景应用。在临床数据平台与数智服务系统建设上，联合安医大一附院构建涵盖病历、检查等多维度的大规模临床数据集，共建科研大数据分析平台与多模态诊疗数智服务系统，该系统已在安医大一附院泌尿外科落地数据智慧管理平台，后续接入微创行业互联网协同服务平台，对外提供疾病趋势预测、临床决策辅助等智能化服务，显著提升了相关重点学科的诊疗效率与精准水平。
+
+<Video src={platform} />
 
 ## BibTeX 引文
 
@@ -165,12 +179,16 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
 
 ```bibtex
 @article{yang2023semantic,
-  title={Semantic-Preserving Surgical Video Retrieval with Phase and Behavior Coordinated Hashing},
   author={Yang, Yuxuan and Wang, Hao and Wang, Jizhou and Dong, Kai and Ding, Shuai},
-  journal={IEEE Transactions on Medical Imaging},
-  year={2023},
-  publisher={IEEE}
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={Semantic-Preserving Surgical Video Retrieval With Phase and Behavior Coordinated Hashing}, 
+  year={2024},
+  volume={43},
+  number={2},
+  pages={807-819},
+  doi={10.1109/TMI.2023.3321382}
 }
+
 ```
 
 ### DSVS
@@ -186,9 +204,8 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
 }
 ```
 
-
 ## 致谢
 
 本人及团队诚挚感谢国家自然科学基金委的资助。
 本人及团队还要感谢上海交通大学医学院范先群院士团队、中国科学技术大学附属第一医院王继洲教授团队、安徽医科大学第一附属医院杨诚教授团队以及安徽省眼科医院石磊院长团队。
-此外，本人及团队法国斯特拉斯堡大学(CAMMA实验室)[http://camma.u-strasbg.fr/]和奥地利克拉根福大学(ITEC研究所))[https://ftp.itec.aau.at/datasets/ovid/cat-101/]的公开数据集。
+此外，本人及团队感谢法国斯特拉斯堡大学[CAMMA实验室](http://camma.u-strasbg.fr/)和奥地利克拉根福大学[ITEC研究所](https://ftp.itec.aau.at/datasets/ovid/cat-101/)所提供的公开数据集。
