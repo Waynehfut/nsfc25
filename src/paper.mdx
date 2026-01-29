@@ -6,10 +6,10 @@ authors:
     institution: 合肥工业大学
     notes: ["*"]
 
-conference: 国家自然科学基金青年科学基金项目（72201085）
+conference: 国家自然科学基金青年科学基金项目（C类）（72201085）
 notes:
   - symbol: "*"
-    text: 项目负责人诚挚感谢各位专家、合作伙伴及各位同学的支持与协作
+    text: 项目负责人诚挚感谢国家自然科学基金委、各位领域专家、合作伙伴及各位同学的支持与协作
 
 links:
   - name: SPSVR
@@ -51,6 +51,12 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/starwind/
 import { Comparison } from "./components/Comparison.tsx";
 
 import intor from "./assets/video/intor.mp4";
+import r1 from "./assets/img/r1.png";
+import r2 from "./assets/img/r2.png";
+import r3 from "./assets/img/r3.png";
+import spsvr from "./assets/img/spsvr.png";
+import dsvs from "./assets/img/dsvs.png";
+import smil from "./assets/img/smil.png";
 import dogsDiffc from "./assets/dogs-diffc.png"
 import dogsTrue from "./assets/dogs-true.png"
 import dogsMsillm from "@/assets/dogs-msillm.jpg"
@@ -64,57 +70,58 @@ import dogsMsillm from "@/assets/dogs-msillm.jpg"
 微创手术是普外科、心胸外科等二十余个科室的重要诊疗手段，开展微创手术质量控制是保障人民群众生命财产安全的重要途径，更是国家推进“健康中国2030”战略的重要组成之一。针对手术质量控制中的精确响应困难、多模数据处理和质控过程复杂等问题，本项目采取数据驱动与行为建模相结合的思路研究智能化微创手术质量控制方法，基于结构化、文本型、影像型等微创手术多模态数据，探索融合专家知识引导与特征语义关联的手术特征发现方法，设计结合操作行为型微观尺度、过程阶段型中观尺度、流程周期型宏观尺度的手术行为理解与异常感知机制，建立基于多属性决策机制和关键评价指标响应的过程质量综合评价与反馈体系，并以前期搭建的“德医云”微创医疗服务平台为案例开展验证研究。项目研究将为解决行为响应的手术质量控制问题提供新的方法和途径，有助于微创手术智能决策理论体系的丰富和优质医疗资源与服务的公平可及，具有重要的理论意义和实际价值。
 </HighlightedSection>
 
-## 应用
-
+## 主要研究
 
 ### 多模态数据特征发现与关联
 
+从手术指南、专家共识等医学知识中提取评估指标，搭建多模态微创手术质量评估指标体系，研究跨模态语义特征抽取机制，设计视觉区域约束的多模态语义特征发现算法，提出融合特征语义有效性与可信度的手术特征表示框架；探索多模态数据特征对齐的关联规则挖掘机制，建立多源数据耦合框架，设计相关度量函数与语义关联方法，提出结合特征可信度和关联度的手术质量评估方法。
+
+<Picture src={r1} alt="特征发现与关联" />
+
 ### 多尺度行为理解与异常感知
+
+结合手术指南等医学知识与多模态数据特征，研究多尺度手术行为发现方法，借图机器学习设计跨尺度特征关联模式，构建其统一表示框架，探索数据与手术行为关联，建立上下文信息引导的多尺度行为理解方法；建立手术阶段转移因素发现机制，提出异常手术行为主动感知模型，依托时序关联约束建立融合记录一致性与环节完整性的手术合规性评估方法。
+
+<Picture src={r2} alt="行为理解与感知" />
 
 ### 智能化质量评估与过程反馈
 
+依托已构建的微创手术质量评估指标体系，设计融合客观指标与行为合规性度量的复合评估框架，建立考虑专家风险态度的效用函数和数据变异导向的指标赋权模式，结合多尺度行为合规度量与异常感知，研究阶段状态转移响应的过程质量综合评估方法；提出质控关键影响指标发现方法，搭建优质方案搜索算法，提出多属性匹配、偏好排序及动态排序策略，建立关键路径匹配的手术方案优化反馈模式。
+
+<Picture src={r3} alt="质量评估与反馈" />
 
 
-### Picture
+## 研究进展
 
-Use the `Picture` component to display images. If you have a figure in PDF format, you can pass in its path as the `src` prop and it will be converted into a web-friendly image automatically.
+本项目围绕“如何利用数据与知识联合驱动手术行为理解与质量控制决策”这一核心科学问题展开研究。针对微创手术过程中多模态数据复杂、手术行为细粒度理解困难、质量评估缺乏智能化支撑等关键问题，开展了系列研究工作。项目以方法探索和技术验证为重点，从多模态手术数据特征发现与关联、细粒度手术行为理解入手，形成了以器械—操作—组织三元组为核心的手术行为建模思路，并在视频摘要生成、智能服务平台等方面完成了可行性验证。
 
-<Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-
-
-### Tab panels
-
-Tab panels are a great way to display a labeled collection of related visuals without taking up too much space.
-
-<Tabs defaultValue="true">
+<Tabs defaultValue="spsvr">
   <TabsList>
-    <TabsTrigger value="true">Ground truth</TabsTrigger>
-    <TabsTrigger value="diffc">DiffC (Flux-dev)</TabsTrigger>
-    <TabsTrigger value="msillm">MS-ILLM</TabsTrigger>
+    <TabsTrigger value="spsvr">SPSVR</TabsTrigger>
+    <TabsTrigger value="dsvs">DSVS</TabsTrigger>
+    <TabsTrigger value="smil">SMIL</TabsTrigger>
   </TabsList>
-  <TabsContent value="true">
+  <TabsContent value="spsvr">
     <Picture
-      src={dogsTrue}
-      alt="True photo of two dogs running side-by-side in shallow water"
+      src={spsvr}
+      alt="语义信息保持的手术视频检索方法"
     />
   </TabsContent>
-  <TabsContent value="diffc">
+  <TabsContent value="dsvs">
     <Picture
-      src={dogsDiffc}
-      alt="Photo of two running dogs, lossily compressed using the DiffC algorithm"
+      src={dsvs}
+      alt="平衡信息性与多样性的手术视频摘要方法"
     />
   </TabsContent>
-  <TabsContent value="msillm">
+  <TabsContent value="smil">
     <Picture
-      src={dogsMsillm}
-      alt="Photo of two running dogs, lossily compressed using MS-ILLM"
+      src={smil}
+      alt="基于自监督学习的手术关键视野质量评估方法"
     />
   </TabsContent>
 </Tabs>
 
-### Carousel
-
-A carousel is another useful pattern for a collection of visuals that don't necessarily have meaningful labels.
+## 学术交流
 
 <Carousel>
   <CarouselSlide>
@@ -131,14 +138,22 @@ A carousel is another useful pattern for a collection of visuals that don't nece
   </CarouselSlide>
 </Carousel>
 
+## 专利成果
 
-### Wide visual
-
-I constrained the maximum width of the text column to make sure it's readable even when the screen is wide. But images and other visuals should "break out" and take up more horizontal space: for this, try wrapping them in the `Wide` component.
-
-<Wide>
-  <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
-</Wide>
+<Carousel>
+  <CarouselSlide>
+    <Picture src={dogsTrue} alt="True photo of two dogs running side-by-side in shallow water" />
+  </CarouselSlide>
+  <CarouselSlide>
+    <Picture src={dogsDiffc} alt="Photo of two running dogs, lossily compressed using the DiffC algorithm" />
+  </CarouselSlide>
+  <CarouselSlide>
+    <Picture
+      src={dogsMsillm}
+      alt="Photo of two running dogs, lossily compressed using MS-ILLM"
+    />
+  </CarouselSlide>
+</Carousel>
 
 ## BibTeX 引文
 
@@ -168,3 +183,10 @@ I constrained the maximum width of the text column to make sure it's readable ev
   journal = {IEEE Transactions on Medical Imaging}
 }
 ```
+
+
+## 致谢
+
+本人及团队诚挚感谢国家自然科学基金委的资助。
+本人及团队还要感谢上海交通大学医学院范先群院士团队、中国科学技术大学附属第一医院王继洲教授团队、安徽医科大学第一附属医院杨诚教授团队以及安徽省眼科医院石磊院长团队。
+此外，本人及团队法国斯特拉斯堡大学(CAMMA实验室)[http://camma.u-strasbg.fr/]和奥地利克拉根福大学(ITEC研究所))[https://ftp.itec.aau.at/datasets/ovid/cat-101/]的公开数据集。
